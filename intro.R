@@ -116,25 +116,3 @@ t.test(M_G3, F_G3)
 #  + Intepret the p-value from the test to decide whether to accept/reject your hypothesis?
 
 # EXERCISES:
-
-# Exercise 1 (for week 2 workshop)
-
-
-boxplot(G3~Walc, data=math, xlab="In a romantic relationship", ylab="G3 Score")
-hist(math$Walc)
-
-group_1 = math_nozeroG3[which(math_nozeroG3$Walc <3), ]$G3 # Students who score less than 3 on weekly alcohol rating
-group_2 = math_nozeroG3[which(math_nozeroG3$Walc >2), ]$G3 # Students who score less than 2 on weekly alcohol rating
-
-a <- hist(group_1, col='red')
-b <- hist(group_2, col='blue')
-
-colour_1 = rgb(1,0,0,0.3)
-colour_2 = rgb(0,0,1,0.3)
-
-plot(a, col=colour_1, xlab="G3 Test Score")
-plot(b, ,col=colour_2, add=T)
-
-t.test(group_1, group_2)
-
-help(plot)
